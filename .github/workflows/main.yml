@@ -1,0 +1,38 @@
+name: End-to-end tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check formatting
+        run: npm run format:check
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          # Starts the local server if needed (not needed here since we use a remote baseUrl)
+          # but we need to pass the baseUrl just in case or depend on the cypress.config.js
+          browser: chrome
+          spec: cypress/e2e/specs/*.cy.js
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-reports
+          path: cypress/reports
+          retention-days: 7
+
+      - name: Upload screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 7

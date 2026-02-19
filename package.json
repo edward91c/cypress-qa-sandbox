@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:clean": "rimraf cypress/reports",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.5.0",
+    "cypress": "^15.10.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2",
+    "prettier": "^3.8.1",
+    "rimraf": "^6.1.3"
+  },
+  "dependencies": {
+    "jfaker": "^1.2.0"
+  }
+}
