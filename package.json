@@ -1,4 +1,10 @@
 {
+  "name": "cypress-qa-sandbox",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edward91c/cypress-qa-sandbox.git"
+  },
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
