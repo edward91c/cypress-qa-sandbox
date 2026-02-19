@@ -4,21 +4,20 @@ Automated E2E test suite using [Cypress](https://www.cypress.io/) for the [QA Au
 
 ---
 
-## 📁 Project Structure
+### 📁 Project Structure
 
 ```
 cypress/
 ├── e2e/
 │   └── specs/        # Test specifications (.cy.js)
-├── fixtures/         # Static test data (JSON)
+├── fixtures/         # Static test data (JSON) - e.g., texts.json
 ├── pages/            # Page Objects (UI encapsulation)
 ├── reports/          # Mochawesome reports (git-ignored)
 ├── support/          # Custom commands & global hooks
 └── utils/            # Helpers (fake data generators, formatters)
 ```
 
-> **Why `pages/` is outside `e2e/`?**
-> Keeping Page Objects separated from specs prevents Cypress from accidentally scanning them as test files and keeps the `e2e/` folder exclusively for executable tests.
+> **Note on Fixtures:** The project uses `cypress/fixtures/texts.json` to store static text content (titles, messages, labels) separarely from the test code. This improves maintainability and centralization of text updates.
 
 ---
 
@@ -213,17 +212,17 @@ npm run cy:open
 
 ## ✅ Test Coverage
 
-| Module             | Status     |
-| ------------------ | ---------- |
-| Home Page          | 🔲 Pending |
-| Login              | 🔲 Pending |
-| Register           | 🔲 Pending |
-| Products Catalog   | 🔲 Pending |
-| Product Detail     | 🔲 Pending |
-| Shopping Cart      | 🔲 Pending |
-| Checkout           | 🔲 Pending |
-| User Profile       | 🔲 Pending |
-| Testing Playground | 🔲 Pending |
+| Module             | Status       |
+| ------------------ | ------------ |
+| Home Page          | ✅ Completed |
+| Login              | 🔲 Pending   |
+| Register           | 🔲 Pending   |
+| Products Catalog   | 🔲 Pending   |
+| Product Detail     | 🔲 Pending   |
+| Shopping Cart      | 🔲 Pending   |
+| Checkout           | 🔲 Pending   |
+| User Profile       | 🔲 Pending   |
+| Testing Playground | 🔲 Pending   |
 
 ---
 
