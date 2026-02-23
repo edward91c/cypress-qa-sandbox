@@ -216,13 +216,30 @@ npm run cy:open
 | ------------------ | ------------ |
 | Home Page          | ✅ Completed |
 | Login              | 🔲 Pending   |
-| Register           | 🔲 Pending   |
+| Register           | ✅ Completed |
 | Products Catalog   | 🔲 Pending   |
 | Product Detail     | 🔲 Pending   |
 | Shopping Cart      | 🔲 Pending   |
 | Checkout           | 🔲 Pending   |
 | User Profile       | 🔲 Pending   |
 | Testing Playground | 🔲 Pending   |
+
+<details>
+<summary><b>View detail: Home Page Coverage</b></summary>
+<br>
+
+- `✅` Verify all critical elements are visible
+</details>
+
+<details>
+<summary><b>View detail: Register Coverage</b></summary>
+<br>
+
+- `✅` Verify register page UI elements
+- `✅` Register a new user successfully (Happy Path)
+- `✅` Verify required validations with empty fields
+- `✅` Validate Confirm Password specific mismatch error
+</details>
 
 ---
 

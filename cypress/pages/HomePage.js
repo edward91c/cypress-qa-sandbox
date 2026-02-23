@@ -49,7 +49,7 @@ class HomePage {
   verifyPageElement() {
     this.heroTitle.should('be.visible');
 
-    // Validamos el subtítulo usando el fixture
+    // We validate the subtitle using the fixture
     cy.fixture('texts').then((texts) => {
       this.heroSubtitle.should('be.visible').should('have.text', texts.homePage.subtitle);
     });
